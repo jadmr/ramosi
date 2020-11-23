@@ -13,8 +13,6 @@ namespace Data.Entities
 
         public Guid Guid { get; set; }
 
-        public string Name { get; set; }
-
         public string Notes { get; set; }
 
         public virtual IList<PlantAlias> Aliases { get; set; }
