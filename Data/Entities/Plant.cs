@@ -15,6 +15,6 @@ namespace Data.Entities
 
         public string Notes { get; set; }
 
-        public virtual IList<PlantAlias> Aliases { get; set; }
+        public virtual ICollection<PlantAlias> Aliases { get; set; }
     }
 }

@@ -9,6 +9,7 @@ namespace Data.Entities
 
         public string Name { get; set; }
 
+        public Guid Guid PlantId { get; set; }
         public virtual Plant Plant { get; set; }
     }
 }
