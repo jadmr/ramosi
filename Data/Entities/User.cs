@@ -11,5 +11,7 @@ namespace Data.Entities
         public string Email { get; set; }
 
         public string Phone { get; set; }
+
+        public virtual GoogleAuth GoogleAuth { get; set; }
     }
 }
