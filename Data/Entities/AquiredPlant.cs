@@ -1,9 +1,15 @@
 using System;
+using System.Collections.Generic;
 
 namespace Data.Entities
 {
     public class AquiredPlant
     {
+        public AquiredPlant()
+        {
+            Schedules = new List<WateringSchedule>();
+        }
+
         public Guid Guid { get; set; }
 
         public string Nickname { get; set; }
@@ -17,5 +23,7 @@ namespace Data.Entities
 
         public Guid PlantAliasId { get; set; }
         public virtual PlantAlias PlantAlias { get; set; }
+
+        public virtual IList<WateringSchedule> Schedules { get; set; }
     }
 }
