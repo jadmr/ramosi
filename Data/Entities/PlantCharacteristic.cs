@@ -7,13 +7,13 @@ namespace Data.Entities
     {
         public PlantCharacteristic()
         {
-            Aliases = new List<PlantAlias>(){};
+            Plants = new List<Plant>(){};
         }
 
         public Guid Guid { get; set; }
 
         public string Notes { get; set; }
 
-        public virtual ICollection<PlantAlias> Aliases { get; set; }
+        public virtual ICollection<Plant> Plants { get; set; }
     }
 }

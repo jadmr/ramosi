@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Data.Entities
 {
-    public class PlantAlias
+    public class Plant
     {
-        public PlantAlias()
+        public Plant()
         {
             Owners = new List<User>();
             PlantCollection = new List<AquiredPlant>();

@@ -21,8 +21,8 @@ namespace Data.Entities
         public Guid UserId { get; set; }
         public virtual User User { get; set; }
 
-        public Guid PlantAliasId { get; set; }
-        public virtual PlantAlias PlantAlias { get; set; }
+        public Guid PlantId { get; set; }
+        public virtual Plant Plant { get; set; }
 
         public virtual IList<WateringSchedule> Schedules { get; set; }
     }
