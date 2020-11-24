@@ -12,7 +12,7 @@ namespace Data.Entities
 
         public string Repeat { get; set; }
 
-        public Guid AquiredPlantId { get; set; }
-        public virtual AquiredPlant Plant { get; set; }
+        public Guid PlantCollectionId { get; set; }
+        public virtual PlantCollection PlantCollection { get; set; }
     }
 }

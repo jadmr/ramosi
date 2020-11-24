@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Data.Entities
 {
-    public class AquiredPlant
+    public class PlantCollection
     {
-        public AquiredPlant()
+        public PlantCollection()
         {
             Schedules = new List<WateringSchedule>();
         }
