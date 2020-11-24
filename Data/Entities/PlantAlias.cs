@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 
 namespace Data.Entities
 {
@@ -16,8 +15,8 @@ namespace Data.Entities
 
         public string Name { get; set; }
 
-        public Guid PlantId { get; set; }
-        public virtual Plant Plant { get; set; }
+        public Guid PlantCharacteristicId { get; set; }
+        public virtual PlantCharacteristic PlantCharacteristic { get; set; }
 
         public virtual ICollection<User> Owners { get; set; }
         public virtual IList<AquiredPlant> PlantCollection { get; set; }

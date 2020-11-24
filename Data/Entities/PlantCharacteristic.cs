@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 
 namespace Data.Entities
 {
-    public class Plant
+    public class PlantCharacteristic
     {
-        public Plant()
+        public PlantCharacteristic()
         {
             Aliases = new List<PlantAlias>(){};
         }
