@@ -7,7 +7,6 @@ namespace Data.Entities
     {
         public Plant()
         {
-            Owners = new List<User>();
             PlantCollection = new List<PlantCollection>();
         }
 
@@ -18,7 +17,6 @@ namespace Data.Entities
         public Guid PlantCharacteristicId { get; set; }
         public virtual PlantCharacteristic PlantCharacteristic { get; set; }
 
-        public virtual ICollection<User> Owners { get; set; }
         public virtual IList<PlantCollection> PlantCollection { get; set; }
     }
 }

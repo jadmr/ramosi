@@ -14,6 +14,6 @@ namespace Data.Entities
 
         public string Notes { get; set; }
 
-        public virtual ICollection<Plant> Plants { get; set; }
+        public virtual IList<Plant> Plants { get; set; }
     }
 }

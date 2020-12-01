@@ -7,7 +7,6 @@ namespace Data.Entities
     {
         public User()
         {
-            Plants = new List<Plant>();
             PlantCollection = new List<PlantCollection>();
         }
 
@@ -21,7 +20,6 @@ namespace Data.Entities
 
         public virtual GoogleAuth GoogleAuth { get; set; }
 
-        public virtual ICollection<Plant> Plants { get; set; }
         public virtual IList<PlantCollection> PlantCollection { get; set; }
     }
 }
