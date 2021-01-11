@@ -3,14 +3,12 @@ using System.Collections.Generic;
 
 namespace Entities.Entities
 {
-    public class User
+    public class User : BaseEntity
     {
         public User()
         {
             PlantCollection = new List<PlantCollection>();
         }
-
-        public Guid Guid { get; set; }
 
         public string Nickname { get; set; }
 
