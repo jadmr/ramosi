@@ -1,6 +1,6 @@
 using System;
 
-namespace Data.Entities
+namespace Entities.Entities
 {
     public class WateringSchedule
     {

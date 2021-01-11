@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 
-namespace Data.Entities
+namespace Entities.Entities
 {
     public class PlantCharacteristic
     {
         public PlantCharacteristic()
         {
-            Plants = new List<Plant>(){};
+            Plants = new List<Plant>() { };
         }
 
         public Guid Guid { get; set; }
