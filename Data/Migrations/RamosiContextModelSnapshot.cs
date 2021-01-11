@@ -17,7 +17,7 @@ namespace Data.Migrations
                 .HasAnnotation("ProductVersion", "3.1.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Data.Entities.GoogleAuth", b =>
+            modelBuilder.Entity("Entities.Entities.GoogleAuth", b =>
                 {
                     b.Property<byte[]>("Guid")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace Data.Migrations
                     b.ToTable("GoogleAuths");
                 });
 
-            modelBuilder.Entity("Data.Entities.Plant", b =>
+            modelBuilder.Entity("Entities.Entities.Plant", b =>
                 {
                     b.Property<byte[]>("Guid")
                         .ValueGeneratedOnAdd()
@@ -61,7 +61,7 @@ namespace Data.Migrations
                     b.ToTable("Plants");
                 });
 
-            modelBuilder.Entity("Data.Entities.PlantCharacteristic", b =>
+            modelBuilder.Entity("Entities.Entities.PlantCharacteristic", b =>
                 {
                     b.Property<byte[]>("Guid")
                         .ValueGeneratedOnAdd()
@@ -76,7 +76,7 @@ namespace Data.Migrations
                     b.ToTable("PlantCharacteristics");
                 });
 
-            modelBuilder.Entity("Data.Entities.PlantCollection", b =>
+            modelBuilder.Entity("Entities.Entities.PlantCollection", b =>
                 {
                     b.Property<byte[]>("Guid")
                         .ValueGeneratedOnAdd()
@@ -111,7 +111,7 @@ namespace Data.Migrations
                     b.ToTable("PlantCollections");
                 });
 
-            modelBuilder.Entity("Data.Entities.User", b =>
+            modelBuilder.Entity("Entities.Entities.User", b =>
                 {
                     b.Property<byte[]>("Guid")
                         .ValueGeneratedOnAdd()
@@ -135,7 +135,7 @@ namespace Data.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Data.Entities.WateringSchedule", b =>
+            modelBuilder.Entity("Entities.Entities.WateringSchedule", b =>
                 {
                     b.Property<byte[]>("Guid")
                         .ValueGeneratedOnAdd()
@@ -165,42 +165,42 @@ namespace Data.Migrations
                     b.ToTable("WateringSchedules");
                 });
 
-            modelBuilder.Entity("Data.Entities.GoogleAuth", b =>
+            modelBuilder.Entity("Entities.Entities.GoogleAuth", b =>
                 {
-                    b.HasOne("Data.Entities.User", "User")
+                    b.HasOne("Entities.Entities.User", "User")
                         .WithOne("GoogleAuth")
-                        .HasForeignKey("Data.Entities.GoogleAuth", "UserId")
+                        .HasForeignKey("Entities.Entities.GoogleAuth", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Data.Entities.Plant", b =>
+            modelBuilder.Entity("Entities.Entities.Plant", b =>
                 {
-                    b.HasOne("Data.Entities.PlantCharacteristic", "PlantCharacteristic")
+                    b.HasOne("Entities.Entities.PlantCharacteristic", "PlantCharacteristic")
                         .WithMany("Plants")
                         .HasForeignKey("PlantCharacteristicId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Data.Entities.PlantCollection", b =>
+            modelBuilder.Entity("Entities.Entities.PlantCollection", b =>
                 {
-                    b.HasOne("Data.Entities.Plant", "Plant")
+                    b.HasOne("Entities.Entities.Plant", "Plant")
                         .WithMany("PlantCollection")
                         .HasForeignKey("PlantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Data.Entities.User", "User")
+                    b.HasOne("Entities.Entities.User", "User")
                         .WithMany("PlantCollection")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Data.Entities.WateringSchedule", b =>
+            modelBuilder.Entity("Entities.Entities.WateringSchedule", b =>
                 {
-                    b.HasOne("Data.Entities.PlantCollection", "PlantCollection")
+                    b.HasOne("Entities.Entities.PlantCollection", "PlantCollection")
                         .WithMany("Schedules")
                         .HasForeignKey("PlantCollectionId")
                         .OnDelete(DeleteBehavior.Cascade)
