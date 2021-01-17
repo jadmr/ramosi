@@ -108,6 +108,24 @@ namespace Data.Context
                 w.HasOne(w => w.PlantCollection)
                     .WithMany(c => c.Schedules);
             });
+
+            modelBuilder.Entity<Audit>(a => {
+                a.HasKey(a => a.Guid);
+
+                a.Property(a => a.EntityGuid)
+                    .IsRequired()
+                    .ValueGeneratedNever();
+
+                a.Property(a => a.ChangeType)
+                    .IsRequired();
+
+                a.Property(a => a.Date)
+                    .IsRequired();
+
+                a.HasOne(a => a.User)
+                    .WithMany(u => u.Audits)
+                    .HasForeignKey(a => a.UserId);
+            });
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

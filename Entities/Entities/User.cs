@@ -18,5 +18,7 @@ namespace Entities.Entities
         public virtual GoogleAuth GoogleAuth { get; set; }
 
         public virtual IList<PlantCollection> PlantCollection { get; set; }
+
+        public virtual IList<Audit> Audits { get; set; }
     }
 }
