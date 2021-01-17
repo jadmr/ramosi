@@ -2,10 +2,8 @@ using System;
 
 namespace Entities.Entities
 {
-    public class GoogleAuth
+    public class GoogleAuth : BaseEntity
     {
-        public Guid Guid { get; set; }
-
         public string Sub { get; set; }
 
         public Guid UserId { get; set; }

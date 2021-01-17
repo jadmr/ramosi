@@ -2,10 +2,8 @@ using System;
 
 namespace Entities.Entities
 {
-    public class WateringSchedule
+    public class WateringSchedule : BaseEntity
     {
-        public Guid Guid { get; set; }
-
         public string DayOfWeek { get; set; }
 
         public DateTime TimeOfDay { get; set; }
