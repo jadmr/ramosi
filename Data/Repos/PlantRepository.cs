@@ -13,7 +13,7 @@ namespace Data.Repos
         protected override void UpdateOriginalEntityFields(Plant original, Plant edited)
         {
             original.Name = edited.Name;
-            original.PlantCharacteristicId = edited.PlantCharacteristicId;
+            original.PlantCharacteristic = edited.PlantCharacteristic;
             original.PlantCollection = edited.PlantCollection;
         }
     }
