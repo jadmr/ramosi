@@ -5,7 +5,7 @@ namespace Test.Builders.Entities
     public class GoogleAuthBuilder
     {
         private string sub = "hash";
-        private User user = new UserBuilder();
+        private User user = null;
 
         public static implicit operator GoogleAuth(GoogleAuthBuilder builder)
         {
