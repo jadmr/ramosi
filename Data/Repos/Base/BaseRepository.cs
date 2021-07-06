@@ -40,6 +40,9 @@ namespace Data.Repos.Base
 
         public T Edit(T entity)
         {
+            if (entity == null)
+                throw new ArgumentNullException("Cannot edit null entity");
+
             var original = Get(entity.Guid);
 
             if (original == null)
