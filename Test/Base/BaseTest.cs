@@ -7,5 +7,6 @@ namespace Test.Base
         protected readonly Guid guidOne = new Guid(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
         protected readonly Guid guidTwo = new Guid(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2);
         protected readonly Guid guidThree = new Guid(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3);
+        protected readonly Guid guidFour = new Guid(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4);
     }
 }
