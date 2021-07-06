@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Entities.Entities;
 
@@ -5,6 +6,7 @@ namespace Test.Builders.Entities
 {
     public class PlantBuilder
     {
+        private Guid guid = new Guid(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
         private string name = "plant";
         private PlantCharacteristic plantCharacteristic = new PlantCharacteristicBuilder();
         private IList<PlantCollection> plantCollection = new List<PlantCollection>() { };
@@ -13,10 +15,17 @@ namespace Test.Builders.Entities
         {
             return new Plant()
             {
+                Guid = builder.guid,
                 Name = builder.name,
                 PlantCharacteristic = builder.plantCharacteristic,
                 PlantCollection = builder.plantCollection,
             };
+        }
+
+        public PlantBuilder WithGuid(Guid guid)
+        {
+            this.guid = guid;
+            return this;
         }
 
         public PlantBuilder WithName(string name)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Test.Builders.Entities;
 
@@ -5,6 +6,7 @@ namespace Entities.Entities
 {
     public class PlantCollectionBuilder
     {
+        private Guid guid = new Guid(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
         private string nickname = "nickname";
         private string location = "location";
         private string notes = "notes";
@@ -16,6 +18,7 @@ namespace Entities.Entities
         {
             return new PlantCollection()
             {
+                Guid = builder.guid,
                 Nickname = builder.nickname,
                 Location = builder.location,
                 Notes = builder.notes,
@@ -23,6 +26,12 @@ namespace Entities.Entities
                 Plant = builder.plant,
                 Schedules = builder.wateringSchedule,
             };
+        }
+
+        public PlantCollectionBuilder WithGuid(Guid guid)
+        {
+            this.guid = guid;
+            return this;
         }
 
         public PlantCollectionBuilder WithNickname(string nickname)
