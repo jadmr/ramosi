@@ -12,9 +12,9 @@ namespace Data.Repos
 
         protected override void UpdateOriginalEntityFields(Plant original, Plant edited)
         {
+            // Plant characteristics are edited from the PlantCharacteristicRepo
+            // Plants are added or removed from a collection through the PlantCollectionRepo
             original.Name = edited.Name;
-            original.PlantCharacteristic = edited.PlantCharacteristic;
-            original.PlantCollection = edited.PlantCollection;
         }
     }
 }
